@@ -4,6 +4,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/**
+ * @brief Ubicación en el plano 2D
+ *
+ */
 class Point
 {
   public:
@@ -11,6 +15,10 @@ class Point
     double y;
 };
 
+/**
+ * @brief Nodos que se encuentran en QuadTree
+ *
+ */
 class QuadTreeNode
 {
   public:
@@ -22,15 +30,22 @@ class QuadTreeNode
     QuadTreeNode *sw; // tercer cuadrante
     QuadTreeNode *se; // cuarto cuadrante
 
+    /**
+     * QuadTreeNode
+     * @brief Contructor: Setea la ubicacion e información que posee cada nodo de QuadTree
+     *
+     * @param p ubicacion en el plano 2D del nodo
+     * @param d información que contiene el nodo
+     */
     QuadTreeNode(Point p, int d)
     {
         point = p;
         data = d;
 
-        nw = NULL;
-        ne = NULL;
-        sw = NULL;
-        se = NULL;
+        nw = nullptr;
+        ne = nullptr;
+        sw = nullptr;
+        se = nullptr;
     }
 };
 
@@ -40,6 +55,10 @@ class QuadTree
     QuadTreeNode *root;
 
   public:
+    /**
+     * TODO: Necesario implementar todos los métodos
+     *
+     */
     QuadTree();
     int totalPoints();
     int totalNodes();
