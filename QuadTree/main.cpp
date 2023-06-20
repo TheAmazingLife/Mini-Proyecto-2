@@ -1,43 +1,46 @@
-#include <iostream>
+#include "include\QuadTree.hpp"
+#include <bits/stdc++.h>
+using namespace std;
 
-#include "node.h"
-#include "Quad.h"
+int main()
+{
+    // Crear un QuadTree
+    QuadTree quadTree(Point(0, 0), Point(100, 100));
 
+    // Insertar puntos en el QuadTree
+    quadTree.insert(Point(20, 30), "Ciudad A", 100000);
+    quadTree.insert(Point(40, 60), "Ciudad B", 50000);
+    quadTree.insert(Point(80, 70), "Ciudad C", 200000);
 
-int main(int argc, char const *argv[]) {
-    Quad plane2D(Point(0, 0), Point(8, 8));
-    Node p1(Point(0, 0), 5);
-    Node p2(Point(0, 1), 4);
-    Node p3(Point(1, 0), 2);
-    Node p4(Point(1, 1), 2);
-    Node p5(Point(2, 1), 1);
-    Node p6(Point(5, 1), 3);
-    Node p7(Point(6, 2), 10);
-    Node p8(Point(7, 7), 8);
+    // Obtener la cantidad total de puntos y nodos
+    int totalPoints = quadTree.totalPoints();
+    int totalNodes = quadTree.totalNodes();
 
-    plane2D.insert(&p1);
-    plane2D.insert(&p2);
-    plane2D.insert(&p3);
-    plane2D.insert(&p4);
-    plane2D.insert(&p5);
-    plane2D.insert(&p6);
-    plane2D.insert(&p7);
-    plane2D.insert(&p8);
+    cout << "Total de puntos: " << totalPoints << endl;
+    cout << "Total de nodos: " << totalNodes << endl;
 
-    std::cout << "Contenido en la coordenada (5,1): ";
-    Node *p = plane2D.search(Point(5, 1));
-    if (p != NULL)
-        std::cout << p->data << std::endl;
-    else
-        std::cout << "No existe el punto." << std::endl;
-    // Contenido en la coordenada (5,1): 3
+    // Obtener la lista de puntos en el QuadTree
+    list<Point> pointList = quadTree.getPointList();
 
-    std::cout << "Contenido en la coordenada (1,5): ";
-    p = plane2D.search(Point(1, 5));
-    if (p != NULL)
-        std::cout << p->data << std::endl;
-    else
-        std::cout << "No existe el punto." << std::endl;
-    // Contenido en la coordenada (1,5): No existe el punto.
+    cout << "Puntos almacenados en el QuadTree:" << endl;
+    for (const Point &point : pointList)
+    {
+        cout << "Coordenadas: (" << point.x << ", " << point.y << ")" << endl;
+    }
+
+    // Contar la cantidad de puntos en una región
+    Point center(50, 50);
+    int radius = 30;
+    int count = quadTree.countRegion(center, radius);
+
+    cout << "Cantidad de puntos en la region (centro: " << center.x << ", " << center.y << ", radio: " << radius
+         << "): " << count << endl;
+
+    // Calcular la población estimada dentro de una región
+    int population = quadTree.aggregateRegion(center, radius);
+
+    cout << "Población estimada en la region (centro: " << center.x << ", " << center.y << ", radio: " << radius
+         << "): " << population << endl;
+
     return 0;
 }
