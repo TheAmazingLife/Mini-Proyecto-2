@@ -180,6 +180,7 @@ void QuadTree::getPointList(QuadTreeNode *node, list<Point> &pointList)
 
     if (node->isBlack)
     {
+        // Calcular punto medio
         pointList.push_back(Point((node->topLeftLimit.x + node->lowerRightLimit.x) / 2,
                                   (node->topLeftLimit.y + node->lowerRightLimit.y) / 2));
     }

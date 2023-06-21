@@ -2,45 +2,73 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/**
+ * @brief Encuentra la "," de un numero y la transforme en ".". (Ambos numeros siguen representados en cadena de
+ * caracteres)
+ *
+ * @param str
+ */
+void commaToDot(string &str)
+{
+    size_t found = str.find(",");
+    while (found != std::string::npos)
+    {
+        str.replace(found, 1, ".");
+        found = str.find(",", found + 1);
+    }
+}
+
 int main()
 {
+    /*
+    TODO Ubicar puntos negativos en el plano 2D
+    */
     // Crear un QuadTree
     QuadTree quadTree(Point(0, 0), Point(100, 100));
 
-    // Insertar puntos en el QuadTree
-    quadTree.insert(Point(20, 30), "Ciudad A", 100000);
-    quadTree.insert(Point(40, 60), "Ciudad B", 50000);
-    quadTree.insert(Point(80, 70), "Ciudad C", 200000);
+    ifstream file("prueba.csv");
+    string line;
+    int lineIndex = 1;
 
-    // Obtener la cantidad total de puntos y nodos
-    int totalPoints = quadTree.totalPoints();
-    int totalNodes = quadTree.totalNodes();
+    // Leer la primera línea (títulos)
+    getline(file, line);
 
-    cout << "Total de puntos: " << totalPoints << endl;
-    cout << "Total de nodos: " << totalNodes << endl;
-
-    // Obtener la lista de puntos en el QuadTree
-    list<Point> pointList = quadTree.getPointList();
-
-    cout << "Puntos almacenados en el QuadTree:" << endl;
-    for (const Point &point : pointList)
+    // Leer las líneas restantes
+    while (getline(file, line))
     {
-        cout << "Coordenadas: (" << point.x << ", " << point.y << ")" << endl;
+        stringstream ss(line);
+        string token;
+        vector<string> tokens;
+        int columnIndex = 1;
+
+        // Dividir la línea en columnas
+        while (getline(ss, token, ';'))
+        {
+            commaToDot(token);
+            tokens.push_back(token);
+            cout << token << endl;
+            columnIndex++;
+        }
+
+        if (tokens.size() >= 7)
+        {
+            // Obtener los valores de las columnas relevantes
+            double x = stoi(tokens[5]);       // 6ta columna
+            double y = stoi(tokens[6]);       // 7ma columna
+            string cityName = tokens[1];      // 2da columna
+            int population = stoi(tokens[4]); // 5ta columna
+
+            // Insertar el punto en el QuadTree
+            quadTree.insert(Point(x, y), cityName, population);
+        }
+
+        lineIndex++;
     }
 
-    // Contar la cantidad de puntos en una región
-    Point center(50, 50);
-    int radius = 30;
-    int count = quadTree.countRegion(center, radius);
+    file.close();
 
-    cout << "Cantidad de puntos en la region (centro: " << center.x << ", " << center.y << ", radio: " << radius
-         << "): " << count << endl;
-
-    // Calcular la población estimada dentro de una región
-    int population = quadTree.aggregateRegion(center, radius);
-
-    cout << "Población estimada en la region (centro: " << center.x << ", " << center.y << ", radio: " << radius
-         << "): " << population << endl;
+    cout << "Número total de nodos en el QuadTree: " << quadTree.totalNodes() << endl;
+    cout << "Población total en la región: " << quadTree.countRegion(Point(0, 0), 8) << endl;
 
     return 0;
 }
