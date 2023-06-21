@@ -1,74 +1,109 @@
-#include "include\QuadTree.hpp"
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <tuple>
+#include <vector>
+#include "include/Quadtree.hpp"
 
-/**
- * @brief Encuentra la "," de un numero y la transforme en ".". (Ambos numeros siguen representados en cadena de
- * caracteres)
- *
- * @param str
- */
-void commaToDot(string &str)
-{
-    size_t found = str.find(",");
-    while (found != std::string::npos)
-    {
-        str.replace(found, 1, ".");
-        found = str.find(",", found + 1);
+// Función auxiliar para reemplazar la coma por un punto en una cadena
+std::string replaceCommaWithDot(const std::string& str) {
+    std::string result = str;
+    std::size_t commaPos = result.find(',');
+    if (commaPos != std::string::npos) {
+        result.replace(commaPos, 1, ".");
     }
+    return result;
 }
 
-int main()
-{
-    /*
-    TODO Ubicar puntos negativos en el plano 2D
-    */
-    // Crear un QuadTree
-    QuadTree quadTree(Point(0, 0), Point(100, 100));
+// Función para formatear la entrada en un formato admitido por insert
+std::vector<std::tuple<Point, std::string, int>> formatData(const std::string& input) {
+    std::vector<std::tuple<Point, std::string, int>> formattedData;
 
-    ifstream file("prueba.csv");
-    string line;
-    int lineIndex = 1;
+    std::istringstream iss(input);
+    std::string line;
+    std::getline(iss, line); // Ignorar la primera línea (encabezado)
 
-    // Leer la primera línea (títulos)
-    getline(file, line);
-
-    // Leer las líneas restantes
-    while (getline(file, line))
-    {
-        stringstream ss(line);
-        string token;
-        vector<string> tokens;
-        int columnIndex = 1;
-
-        // Dividir la línea en columnas
-        while (getline(ss, token, ';'))
-        {
-            commaToDot(token);
-            tokens.push_back(token);
-            cout << token << endl;
-            columnIndex++;
+    while (std::getline(iss, line)) {
+        std::istringstream lineStream(line);
+        std::string field;
+        std::vector<std::string> fields;
+        while (std::getline(lineStream, field, ';')) {
+            fields.push_back(field);
         }
 
-        if (tokens.size() >= 7)
-        {
-            // Obtener los valores de las columnas relevantes
-            double x = stoi(tokens[5]);       // 6ta columna
-            double y = stoi(tokens[6]);       // 7ma columna
-            string cityName = tokens[1];      // 2da columna
-            int population = stoi(tokens[4]); // 5ta columna
+        if (fields.size() >= 8) {
+            double latitude = std::stod(replaceCommaWithDot(fields[5]));
+            double longitude = std::stod(replaceCommaWithDot(fields[6]));
+            int population = std::stoi(fields[4]);
 
-            // Insertar el punto en el QuadTree
-            quadTree.insert(Point(x, y), cityName, population);
+            Point point = {longitude, latitude};
+            std::tuple<Point, std::string, int> dataTuple = std::make_tuple(point, fields[2], population);
+
+            formattedData.push_back(dataTuple);
         }
-
-        lineIndex++;
     }
 
-    file.close();
+    return formattedData;
+}
 
-    cout << "Número total de nodos en el QuadTree: " << quadTree.totalNodes() << endl;
-    cout << "Población total en la región: " << quadTree.countRegion(Point(0, 0), 8) << endl;
+
+int main() {
+    // Leer datos desde el archivo de entrada
+    std::ifstream inputFile("../DataSet/worldcitiespop_fixed.csv");
+    std::stringstream buffer;
+    buffer << inputFile.rdbuf();
+    std::string input = buffer.str();
+
+    // Formatear los datos
+    std::vector<std::tuple<Point, std::string, int>> formattedData = formatData(input);
+
+    // Crear el Quadtree y cargar los datos
+    Quadtree quadtree;
+    for (const auto& data : formattedData) {
+        Point point = std::get<0>(data);
+        std::string cityName = std::get<1>(data);
+        int population = std::get<2>(data);
+        quadtree.insert(point, cityName, population);
+    }
+
+    // Obtener la cantidad total de puntos
+    int totalPoints = quadtree.totalPoints();
+    std::cout << "Cantidad total de puntos: " << totalPoints << std::endl;
+
+    // Obtener la cantidad total de nodos
+    int totalNodes = quadtree.totalNodes();
+    std::cout << "Cantidad total de nodos: " << totalNodes << std::endl;    
+
+    // Contar la cantidad de puntos en una región
+    Point center = {40.920404, 39.19209};
+    int radius = 10;
+    int count = quadtree.countRegion(center, radius);
+    std::cout << "Cantidad de puntos en la región (centro: " << center.longitude << ", " << center.latitude
+              << ", radio: " << radius << "): " << count << std::endl;
+
+    // Calcular la población estimada dentro de una región
+    int aggregate = quadtree.aggregateRegion(center, radius);
+    std::cout << "Población estimada en la región (centro: " << center.longitude << ", " << center.latitude
+              << ", radio: " << radius << "): " << aggregate << std::endl;
+
+    // Prueba adicional del método countRegion()
+    Point center2 = {37.4816667, -83.3252778};
+    int radius2 = 20;
+    int count2 = quadtree.countRegion(center2, radius2);
+    std::cout << "Cantidad de puntos en la región (centro: " << center2.longitude << ", " << center2.latitude
+              << ", radio: " << radius2 << "): " << count2 << std::endl;
+
+    // Prueba adicional del método aggregateRegion()
+    int aggregate2 = quadtree.aggregateRegion(center2, radius2);
+    std::cout << "Población estimada en la región (centro: " << center2.longitude << ", " << center2.latitude
+              << ", radio: " << radius2 << "): " << aggregate2 << std::endl;
+
+    // Obtener la lista de puntos almacenados en el Quadtree
+    std::list<Point> pointList = quadtree.getPointList();
+    std::cout << "Lista de puntos almacenados en el Quadtree:" << std::endl;
+    for (const auto& point : pointList) {
+        std::cout << "Longitud: " << point.longitude << ", Latitud: " << point.latitude << std::endl;
+    }
 
     return 0;
 }
