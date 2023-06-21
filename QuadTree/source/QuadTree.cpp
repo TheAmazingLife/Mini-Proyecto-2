@@ -1,6 +1,6 @@
 #include "../include/Quadtree.hpp"
 
-Quadtree::Quadtree() : root(nullptr) {}
+Quadtree::Quadtree() : root(new Node()) {}
 
 Quadtree::~Quadtree() {
     clear();
@@ -8,11 +8,11 @@ Quadtree::~Quadtree() {
 
 void Quadtree::clear() {
     clearRecursive(root);
-    root = nullptr;
+    root = new Node();
 }
 
 void Quadtree::clearRecursive(Node* node) {
-    if (node == nullptr) {
+    if (node->color == "White") {
         return;
     }
 
@@ -29,8 +29,8 @@ void Quadtree::insert(Point p, std::string cityName, int population) {
 }
 
 void Quadtree::insertRecursive(Node*& node, Point p, std::string cityName, int population) {
-    if (node == nullptr) {
-        node = new Node(p, cityName, population);
+    if (node->color == "White") {
+        node = new Node(p, cityName, population, "Black"); // Asigna "Black" cuando se inserta información
     } else {
         if (p.longitude < node->point.longitude) {
             if (p.latitude < node->point.latitude) {
@@ -71,7 +71,7 @@ int Quadtree::aggregateRegion(Point p, int d) {
 }
 
 int Quadtree::totalPointsRecursive(Node* node) {
-    if (node == nullptr) {
+    if (node->color == "White") {
         return 0;
     }
 
@@ -86,7 +86,7 @@ int Quadtree::totalPointsRecursive(Node* node) {
 }
 
 int Quadtree::totalNodesRecursive(Node* node) {
-    if (node == nullptr) {
+    if (node->color == "White") {
         return 0;
     }
 
@@ -101,7 +101,7 @@ int Quadtree::totalNodesRecursive(Node* node) {
 }
 
 void Quadtree::getPointListRecursive(Node* node, std::list<Point>& pointList) {
-    if (node == nullptr) {
+    if (node->color == "White") {
         return;
     }
 
@@ -114,7 +114,7 @@ void Quadtree::getPointListRecursive(Node* node, std::list<Point>& pointList) {
 }
 
 int Quadtree::countRegionRecursive(Node* node, Point p, int d) {
-    if (node == nullptr) {
+    if (node->color == "White") {
         return 0;
     }
 
@@ -135,7 +135,7 @@ int Quadtree::countRegionRecursive(Node* node, Point p, int d) {
 }
 
 int Quadtree::aggregateRegionRecursive(Node* node, Point p, int d) {
-    if (node == nullptr) {
+    if (node->color == "White") {
         return 0;
     }
 

@@ -15,12 +15,14 @@ private:
         Point point;
         std::string cityName;
         int population;
+        std::string color; // "Black" para información, "Blanco" para nodo vacío
         Node* NW;
         Node* NE;
         Node* SW;
         Node* SE;
 
-        Node(Point p, std::string name, int pop) : point(p), cityName(name), population(pop), NW(nullptr), NE(nullptr), SW(nullptr), SE(nullptr) {}
+        Node(Point p, std::string name, int pop, std::string c) : point(p), cityName(name), population(pop), color(c), NW(new Node()), NE(new Node()), SW(new Node()), SE(new Node()) {}
+        Node() : color("White") {} 
     };
 
     Node* root;
