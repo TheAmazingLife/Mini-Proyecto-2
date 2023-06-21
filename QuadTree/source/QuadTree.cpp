@@ -89,45 +89,41 @@ int QuadTree::aggregateRegion(Point p, int d)
  */
 void QuadTree::insertNode(QuadTreeNode *currentNode, Point p, string cityName, int population)
 {
-    if (currentNode->isBlack)
+    if (currentNode == nullptr)
+        return;
+
+    // Current quad cannot contain it
+    if (!inBoundary(p))
+        return;
+
+    // We are at a quad of unit area
+    // We cannot subdivide this quad further
+    if (abs(currentNode->topLeftLimit.x - currentNode->lowerRightLimit.x) <= 1 &&
+        abs(currentNode->topLeftLimit.y - currentNode->lowerRightLimit.y) <= 1)
     {
+        if (currentNode->node == nullptr)
+        {
+            currentNode->node = new QuadTreeNode(p, cityName, population);
+        }
         return;
     }
 
-    // Nodo actual es hoja
-    if (currentNode->topLeftLimit.x == currentNode->lowerRightLimit.x &&
-        currentNode->topLeftLimit.y == currentNode->lowerRightLimit.y)
-    {
-        currentNode->isBlack = true;
-        currentNode->cityName = cityName;
-        currentNode->population = population;
-        return;
-    }
-
-    // mid corresponde al punto medio
     int xMid = (currentNode->topLeftLimit.x + currentNode->lowerRightLimit.x) / 2;
     int yMid = (currentNode->topLeftLimit.y + currentNode->lowerRightLimit.y) / 2;
 
     if (p.x <= xMid)
     {
-        /*
-        Si el punto p se encuentra en el cuadrante superior-izquierdo del nodo actual, se agrega un nuevo
-        nodo nw en ese cuadrante si aún no existe. Luego, la función se llama recursivamente con nw.
-        */
         if (p.y <= yMid)
         {
             if (currentNode->nw == nullptr)
             {
-                currentNode->nw = new QuadTreeNode(currentNode->topLeftLimit, Point(xMid, yMid), "", 0);
+                currentNode->nw = new QuadTreeNode(Point(currentNode->topLeftLimit.x, currentNode->topLeftLimit.y),
+                                                   Point(xMid, yMid), "", 0);
             }
             insertNode(currentNode->nw, p, cityName, population);
         }
         else
         {
-            /*
-            Si p se encuentra en el cuadrante inferior-izquierdo, se agrega un nuevo nodo sw en ese cuadrante si aún no
-            existe. Luego, la función se llama recursivamente con sw.
-            */
             if (currentNode->sw == nullptr)
             {
                 currentNode->sw = new QuadTreeNode(Point(currentNode->topLeftLimit.x, yMid + 1),
@@ -138,10 +134,6 @@ void QuadTree::insertNode(QuadTreeNode *currentNode, Point p, string cityName, i
     }
     else
     {
-        /*
-        Si p se encuentra en el cuadrante superior-derecho, se agrega un nuevo nodo ne en ese cuadrante si aún no
-        existe. Luego, la función se llama recursivamente con ne.
-        */
         if (p.y <= yMid)
         {
             if (currentNode->ne == nullptr)
@@ -153,13 +145,11 @@ void QuadTree::insertNode(QuadTreeNode *currentNode, Point p, string cityName, i
         }
         else
         {
-            /*
-            Si p se encuentra en el cuadrante inferior-derecho, se agrega un nuevo nodo se en ese cuadrante si aún no
-            existe. Luego, la función se llama recursivamente con se.
-            */
             if (currentNode->se == nullptr)
             {
-                currentNode->se = new QuadTreeNode(Point(xMid + 1, yMid + 1), currentNode->lowerRightLimit, "", 0);
+                currentNode->se =
+                    new QuadTreeNode(Point(xMid + 1, yMid + 1),
+                                     Point(currentNode->lowerRightLimit.x, currentNode->lowerRightLimit.y), "", 0);
             }
             insertNode(currentNode->se, p, cityName, population);
         }
@@ -305,4 +295,9 @@ int QuadTree::calculatePopulationInRegion(QuadTreeNode *node, Point p, int d)
     }
 
     return population;
+}
+
+bool QuadTree::inBoundary(Point p)
+{
+    return (p.x >= topLeftLimit.x && p.x <= lowerRightLimit.x && p.y >= topLeftLimit.y && p.y <= lowerRightLimit.y);
 }

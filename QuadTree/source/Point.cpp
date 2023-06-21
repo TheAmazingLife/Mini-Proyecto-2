@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-Point::Point(int x, int y)
+Point::Point(double x, double y)
 {
     this->x = x;
     this->y = y;

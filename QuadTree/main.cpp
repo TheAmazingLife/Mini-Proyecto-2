@@ -24,7 +24,7 @@ int main()
     TODO Ubicar puntos negativos en el plano 2D
     */
     // Crear un QuadTree
-    QuadTree quadTree(Point(0, 0), Point(100, 100));
+    QuadTree quadTree(Point(-1000000000, -1000000000), Point(1000000000, 1000000000));
 
     ifstream file("prueba.csv");
     string line;
@@ -39,7 +39,6 @@ int main()
         stringstream ss(line);
         string token;
         vector<string> tokens;
-        int columnIndex = 1;
 
         // Dividir la línea en columnas
         while (getline(ss, token, ';'))
@@ -47,7 +46,6 @@ int main()
             commaToDot(token);
             tokens.push_back(token);
             cout << token << endl;
-            columnIndex++;
         }
 
         if (tokens.size() >= 7)
@@ -61,8 +59,6 @@ int main()
             // Insertar el punto en el QuadTree
             quadTree.insert(Point(x, y), cityName, population);
         }
-
-        lineIndex++;
     }
 
     file.close();
