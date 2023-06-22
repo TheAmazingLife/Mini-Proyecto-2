@@ -27,7 +27,7 @@ std::vector<std::tuple<Point, std::string, int>> formatData(const std::string &i
 
     std::istringstream iss(input);
     std::string line;
-    std::getline(iss, line); // Ignorar la primera línea (encabezado)
+    std::getline(iss, line); // Ignorar la primera linea (encabezado)
 
     while (std::getline(iss, line))
     {

@@ -11,7 +11,7 @@ Quadtree::~Quadtree()
 
 void Quadtree::clear() // ? Podria recibir un nodo como parametro y eliminar desde ahi en caso de cambiarla cambiamos el comentario tambien
 {
-    // Llamada a la función para eliminar el quadtree
+    // Llamada a la funcion para eliminar el quadtree
     clearRecursive(root);
     root = new Node(); // Asigna la raiz como un nodo "White" vacio y disponible
 }
@@ -24,7 +24,7 @@ void Quadtree::clearRecursive(Node *node) // ? Podria llamarse deleteQuadtree
         return;
     }
 
-    // Elimina los nodos hijos en cada dirección
+    // Elimina los nodos hijos en cada direccion
     clearRecursive(node->NW);
     clearRecursive(node->NE);
     clearRecursive(node->SW);
@@ -42,7 +42,7 @@ void Quadtree::insert(Point p, std::string cityName, int population)
 
 void Quadtree::insertRecursive(Node *&node, Point p, std::string cityName, int population)
 {
-    // Si el color del nodo es "White" (blanco), significa que no hay datos en el nodo y se puede insertar la información
+    // Si el color del nodo es "White" (blanco), significa que no hay datos en el nodo y se puede insertar la informacion
     if (node->color == "White")
     {
         delete node;                                       // Elimina el nodo existente
@@ -50,7 +50,7 @@ void Quadtree::insertRecursive(Node *&node, Point p, std::string cityName, int p
     }
     else
     {
-        // Si el nodo no es blanco, se determina qué hijo del nodo actual se debe explorar para la inserción según las coordenadas del punto p
+        // Si el nodo no es blanco, se determina qué hijo del nodo actual se debe explorar para la insercion según las coordenadas del punto p
         if (p.longitude < node->point.longitude)
         {
             if (p.latitude < node->point.latitude)
@@ -92,9 +92,9 @@ int Quadtree::totalNodes()
     return totalNodesRecursive(root);
 }
 
-std::list<Point> Quadtree::getPointList()
+std::list<PointInfo> Quadtree::getPointList()
 {
-    std::list<Point> pointList;             // Lista que almacena los puntos
+    std::list<PointInfo> pointList;             // Lista que almacena los puntos
     getPointListRecursive(root, pointList); // Llama a obtener lista de puntos recursiva
     return pointList;                       // Retorna lista de puntos
 }
@@ -140,7 +140,7 @@ int Quadtree::totalNodesRecursive(Node *node)
 
     int count = 1; // Contador inicializado en 1 para contar el nodo actual
 
-    // Se llama recursivamente a la función para los cuatro hijos del nodo actual y se suma el resultado al contador
+    // Se llama recursivamente a la funcion para los cuatro hijos del nodo actual y se suma el resultado al contador
     count += totalNodesRecursive(node->NW);
     count += totalNodesRecursive(node->NE);
     count += totalNodesRecursive(node->SW);
@@ -149,22 +149,29 @@ int Quadtree::totalNodesRecursive(Node *node)
     return count; // Se devuelve el total de nodos contados
 }
 
-void Quadtree::getPointListRecursive(Node *node, std::list<Point> &pointList)
+void Quadtree::getPointListRecursive(Node *node, std::list<PointInfo> &pointList)
 {
-    // Si el color del nodo es "White" (blanco), no hay puntos en ese nodo, no se agrega nada a la lista
+    // Si el color del nodo es "White", no hay puntos en ese nodo, no se agrega nada a la lista
     if (node->color == "White")
     {
         return;
     }
 
-    // Se agrega el punto almacenado en el nodo actual a la lista
-    pointList.push_back(node->point);
-
     // Se llama recursivamente a la función para los cuatro hijos del nodo actual, pasando la misma lista
-    getPointListRecursive(node->NW, pointList);
-    getPointListRecursive(node->NE, pointList);
-    getPointListRecursive(node->SW, pointList);
-    getPointListRecursive(node->SE, pointList);
+    getPointListRecursive(node->NW, pointList); // Recorrido postorder en el hijo NW
+    getPointListRecursive(node->NE, pointList); // Recorrido postorder en el hijo NE
+    getPointListRecursive(node->SW, pointList); // Recorrido postorder en el hijo SW
+    getPointListRecursive(node->SE, pointList); // Recorrido postorder en el hijo SE
+
+    // Se crea una instancia de la estructura PointInfo y se asignan los valores correspondientes
+    PointInfo pointInfo;
+    pointInfo.longitude = node->point.longitude;
+    pointInfo.latitude = node->point.latitude;
+    pointInfo.cityName = node->cityName;
+    pointInfo.population = node->population;
+
+    // Se agrega el punto junto con su información a la lista
+    pointList.push_back(pointInfo); // Agrega el punto al final de la lista (recorrido Post Order)
 }
 
 int Quadtree::countRegionRecursive(Node *node, Point p, int d)
@@ -187,13 +194,13 @@ int Quadtree::countRegionRecursive(Node *node, Point p, int d)
         count++;
     }
 
-    // Se llama recursivamente a la función para los cuatro hijos del nodo actual, pasando el mismo centro y radio
+    // Se llama recursivamente a la funcion para los cuatro hijos del nodo actual, pasando el mismo centro y radio
     count += countRegionRecursive(node->NW, p, d);
     count += countRegionRecursive(node->NE, p, d);
     count += countRegionRecursive(node->SW, p, d);
     count += countRegionRecursive(node->SE, p, d);
 
-    return count; // Se devuelve el total de puntos contados en la región circular
+    return count; // Se devuelve el total de puntos contados en la region circular
 }
 
 int Quadtree::aggregateRegionRecursive(Node *node, Point p, int d)
@@ -209,17 +216,17 @@ int Quadtree::aggregateRegionRecursive(Node *node, Point p, int d)
     double dy = node->point.latitude - p.latitude;
     int aggregate = 0;
 
-    // Si la distancia al cuadrado es menor o igual al cuadrado del radio d*d, se agrega el valor de población del nodo al valor agregado
+    // Si la distancia al cuadrado es menor o igual al cuadrado del radio d*d, se agrega el valor de poblacion del nodo al valor agregado
     if (dx * dx + dy * dy <= d * d)
     {
         aggregate += node->population;
     }
 
-    // Se llama recursivamente a la función para los cuatro hijos del nodo actual, pasando el mismo centro y radio
+    // Se llama recursivamente a la funcion para los cuatro hijos del nodo actual, pasando el mismo centro y radio
     aggregate += aggregateRegionRecursive(node->NW, p, d);
     aggregate += aggregateRegionRecursive(node->NE, p, d);
     aggregate += aggregateRegionRecursive(node->SW, p, d);
     aggregate += aggregateRegionRecursive(node->SE, p, d);
 
-    return aggregate; // Se devuelve el valor agregado de población en la región circular
+    return aggregate; // Se devuelve el valor agregado de poblacion en la region circular
 }
