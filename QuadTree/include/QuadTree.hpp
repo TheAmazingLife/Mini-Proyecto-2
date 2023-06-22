@@ -16,13 +16,14 @@ public:
     Quadtree();
     ~Quadtree();
 
-    void clear();
-    void insert(Point p, std::string cityName, int population);
-    int totalPoints();
-    int totalNodes();
-    std::list<Point> getPointList();
-    int countRegion(Point p, int d);
-    int aggregateRegion(Point p, int d);
+    void clear(); // Limpia los nodos desde la raiz
+
+    int totalPoints(); // Retorna la cantidad de puntos almacenados en el QuadTree
+    int totalNodes(); // Retorna la cantidad de nodos, tanto blancos como negros, en el QuadTree
+    void insert(Point p, std::string cityName, int population); // Inserta un nuevo punto p en el QuadTree, junto con su data
+    std::list<Point> getPointList(); // Retorna una lista con todos los puntos almacenados en el QuadTree.
+    int countRegion(Point p, int d); // Retorna la poblacion estimada dentro de una region del plano
+    int aggregateRegion(Point p, int d); // Retorna la poblacion estimada dentro de una region del plano
 
 private:
     void clearRecursive(Node *node);
