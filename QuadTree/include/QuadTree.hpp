@@ -4,28 +4,13 @@
 #include <string>
 #include <list>
 
-struct Point {
-    double longitude;
-    double latitude;
-};
+#include "Point.hpp"
+#include "Node.hpp"
 
-class Quadtree {
+class Quadtree
+{
 private:
-    struct Node {
-        Point point;
-        std::string cityName;
-        int population;
-        std::string color; // "Black" para información, "Blanco" para nodo vacío
-        Node* NW;
-        Node* NE;
-        Node* SW;
-        Node* SE;
-
-        Node(Point p, std::string name, int pop, std::string c) : point(p), cityName(name), population(pop), color(c), NW(new Node()), NE(new Node()), SW(new Node()), SE(new Node()) {}
-        Node() : color("White") {} 
-    };
-
-    Node* root;
+    Node *root;
 
 public:
     Quadtree();
@@ -38,15 +23,21 @@ public:
     std::list<Point> getPointList();
     int countRegion(Point p, int d);
     int aggregateRegion(Point p, int d);
+    // ! Metodo extra
+    void printColorAndLevel();
+    void searchCity(const std::string& cityName);
+    void searchCityNode(Node* node, const std::string& cityName);
 
 private:
-    void clearRecursive(Node* node);
-    void insertRecursive(Node*& node, Point p, std::string cityName, int population);
-    int totalPointsRecursive(Node* node);
-    int totalNodesRecursive(Node* node);
-    void getPointListRecursive(Node* node, std::list<Point>& pointList);
-    int countRegionRecursive(Node* node, Point p, int d);
-    int aggregateRegionRecursive(Node* node, Point p, int d);
+    void clearRecursive(Node *node);
+    void insertRecursive(Node *&node, Point p, std::string cityName, int population);
+    int totalPointsRecursive(Node *node);
+    int totalNodesRecursive(Node *node);
+    void getPointListRecursive(Node *node, std::list<Point> &pointList);
+    int countRegionRecursive(Node *node, Point p, int d);
+    int aggregateRegionRecursive(Node *node, Point p, int d);
+    // ! Metodo extra
+    void printNodeColorAndLevel(Node* node, int level);
 };
 
 #endif // QUADTREE_HPP
