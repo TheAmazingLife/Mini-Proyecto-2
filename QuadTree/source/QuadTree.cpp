@@ -139,8 +139,6 @@ void Quadtree::getPointListRecursive(Node *node, std::list<Point> &pointList)
         return;
     }
 
-    // ! metodo extra
-    // std::cout << node->cityName;
     pointList.push_back(node->point);
 
     getPointListRecursive(node->NW, pointList);
@@ -195,62 +193,4 @@ int Quadtree::aggregateRegionRecursive(Node *node, Point p, int d)
     aggregate += aggregateRegionRecursive(node->SE, p, d);
 
     return aggregate;
-}
-
-// TODO: metodo extra
-// ! AMBOS EN DESARROLLO
-
-void Quadtree::printColorAndLevel()
-{
-    printNodeColorAndLevel(root, 0);
-}
-
-void Quadtree::printNodeColorAndLevel(Node *node, int level)
-{
-    if (node->color != "White")
-    {
-        std::cout << "Color: " << node->color << ", Nivel: " << level << std::endl;
-
-        printNodeColorAndLevel(node->NW, level + 1);
-        printNodeColorAndLevel(node->NE, level + 1);
-        printNodeColorAndLevel(node->SW, level + 1);
-        printNodeColorAndLevel(node->SE, level + 1);
-    }
-}
-
-void Quadtree::searchCity(const std::string &cityName)
-{
-    try
-    {
-        searchCityNode(root, cityName);
-    }
-    catch (const std::exception &e)
-    {
-        std::cout << "Error: " << e.what() << std::endl;
-    }
-}
-
-// Método para buscar una ciudad por nombre y devolver información
-void Quadtree::searchCityNode(Node *node, const std::string &cityName)
-{
-    if (node == nullptr || node->color == "White")
-    {
-        // Nodo vacío, se alcanzó una hoja
-        throw std::runtime_error("La ciudad '" + cityName + "' no fue encontrada en el Quadtree.");
-    }
-
-    if (node->cityName == cityName)
-    {
-        // Ciudad encontrada
-        std::cout << "Información de la ciudad '" << cityName << "':" << std::endl;
-        std::cout << "Ubicación: Latitud: " << node->point.latitude << ", Longitud: " << node->point.longitude << std::endl;
-        std::cout << "Población: " << node->population << std::endl;
-        return;
-    }
-
-    // Buscar en los nodos hijos recursivamente
-    searchCityNode(node->NW, cityName);
-    searchCityNode(node->NE, cityName);
-    searchCityNode(node->SW, cityName);
-    searchCityNode(node->SE, cityName);
 }

@@ -23,10 +23,6 @@ public:
     std::list<Point> getPointList();
     int countRegion(Point p, int d);
     int aggregateRegion(Point p, int d);
-    // ! Metodo extra
-    void printColorAndLevel();
-    void searchCity(const std::string& cityName);
-    void searchCityNode(Node* node, const std::string& cityName);
 
 private:
     void clearRecursive(Node *node);
@@ -36,8 +32,6 @@ private:
     void getPointListRecursive(Node *node, std::list<Point> &pointList);
     int countRegionRecursive(Node *node, Point p, int d);
     int aggregateRegionRecursive(Node *node, Point p, int d);
-    // ! Metodo extra
-    void printNodeColorAndLevel(Node* node, int level);
 };
 
 #endif // QUADTREE_HPP
