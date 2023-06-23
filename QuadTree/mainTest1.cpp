@@ -9,8 +9,7 @@
 int main()
 {
     // Leer datos desde el archivo de entrada
-    // std::ifstream inputFile("DataSet/worldcitiespop_fixed.csv");
-    std::ifstream inputFile("DataSet/test2.csv"); // Incluimos el .csv testeo
+    std::ifstream inputFile("DataSet/test3.csv"); // Incluimos el .csv testeo
     std::stringstream buffer;
     buffer << inputFile.rdbuf();
     std::string input = buffer.str();
@@ -45,29 +44,17 @@ int main()
         std::cout << "Ciudad: " << point.cityName << ", Poblacion: " << point.population << ", Longitud: " << point.longitude << ", Latitud: " << point.latitude << std::endl;
     }
 
-    /*     // Contar la cantidad de puntos en una region
-        Point center = {40.920404, 39.19209};
-        int radius = 10;
-        int count = quadtree.countRegion(center, radius);
-        std::cout << "Cantidad de puntos en la region (centro: " << center.longitude << ", " << center.latitude
-                  << ", radio: " << radius << "): " << count << std::endl;
+    // Contar la cantidad de puntos en una region
+    Point center = {4, 2};
+    int radius = 2;
+    int count = quadtree.countRegion(center, radius);
+    std::cout << "Cantidad de puntos en la region (centro: " << center.longitude << ", " << center.latitude
+              << ", radio: " << radius << "): " << count << std::endl;
 
-        // Calcular la poblacion estimada dentro de una region
-        int aggregate = quadtree.aggregateRegion(center, radius);
-        std::cout << "Poblacion estimada en la region (centro: " << center.longitude << ", " << center.latitude
-                  << ", radio: " << radius << "): " << aggregate << std::endl;
-     */
-    /*     // Prueba adicional del método countRegion()
-        Point center2 = {37.4816667, -83.3252778};
-        int radius2 = 20;
-        int count2 = quadtree.countRegion(center2, radius2);
-        std::cout << "Cantidad de puntos en la region (centro: " << center2.longitude << ", " << center2.latitude
-                  << ", radio: " << radius2 << "): " << count2 << std::endl;
+    // Calcular la poblacion estimada dentro de una region
+    int aggregate = quadtree.aggregateRegion(center, radius);
+    std::cout << "Poblacion estimada en la region (centro: " << center.longitude << ", " << center.latitude
+              << ", radio: " << radius << "): " << aggregate << std::endl;
 
-        // Prueba adicional del método aggregateRegion()
-        int aggregate2 = quadtree.aggregateRegion(center2, radius2);
-        std::cout << "Poblacion estimada en la region (centro: " << center2.longitude << ", " << center2.latitude
-                  << ", radio: " << radius2 << "): " << aggregate2 << std::endl;
-     */
     return 0;
 }

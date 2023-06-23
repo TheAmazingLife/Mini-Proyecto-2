@@ -1,4 +1,9 @@
 Country;City;AccentCity;Region;Population;Latitude;Longitude;geopoint
-ar;concepcion;Concepcion;06;438181;-28,391747;-57,887774;-28.391747,-57.887774
-tr;tepeagzi;Tepeagzi;61;102929;40,920404;39,19209;40.920404,39.19209
-tr;yucepinar;Yucepinar;60;23579;40,246859;35,51488;40.246859,35.51488
+ejemplo;ejemplo;ejemplo;xx;5;0;0;XX
+ejemplo;ejemplo;ejemplo;xx;4;0;1;XX
+ejemplo;ejemplo;ejemplo;xx;2;1;0;XX
+ejemplo;ejemplo;ejemplo;xx;2;1;1;XX
+ejemplo;ejemplo;ejemplo;xx;1;2;1;XX
+ejemplo;ejemplo;ejemplo;xx;3;5;1;XX
+ejemplo;ejemplo;ejemplo;xx;10;6;2;XX
+ejemplo;ejemplo;ejemplo;xx;8;7;7;XX
