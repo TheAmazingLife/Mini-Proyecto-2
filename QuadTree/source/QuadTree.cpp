@@ -1,303 +1,189 @@
-#include "..\include\QuadTree.hpp"
+#include "../include/QuadTree.hpp"
+#include "../include/Point.hpp"
+#include <iostream>
+#include <vector>
 
-/**
- * @brief Constructor de la clase QuadTree.
- * @param topLeftLimit Coordenada de la esquina superior izquierda del área cubierta por el QuadTree.
- * @param lowerRightLimit Coordenada de la esquina inferior derecha del área cubierta por el QuadTree.
- */
-QuadTree::QuadTree(Point topLeftLimit, Point lowerRightLimit)
+QuadTree::QuadTree()
 {
-    root = new QuadTreeNode(topLeftLimit, lowerRightLimit, "", 0);
+    topLeft = Point(0, 0);
+    botRight = Point(0, 0);
+    n = nullptr;
+    topLeftTree = nullptr;
+    topRightTree = nullptr;
+    botLeftTree = nullptr;
+    botRightTree = nullptr;
 }
 
-/**
- * @brief Calcula la cantidad total de puntos almacenados en el QuadTree.
- * @return Cantidad total de puntos almacenados.
- */
-int QuadTree::totalPoints()
+QuadTree::QuadTree(Point topL, Point botR)
 {
-    list<Point> pointList;
-    getPointList(root, pointList);
-    return pointList.size();
+    n = nullptr;
+    topLeftTree = nullptr;
+    topRightTree = nullptr;
+    botLeftTree = nullptr;
+    botRightTree = nullptr;
+    topLeft = topL;
+    botRight = botR;
 }
 
-/**
- * @brief Calcula la cantidad total de nodos en el QuadTree, incluyendo tanto nodos blancos como negros.
- * @return Cantidad total de nodos.
- */
-int QuadTree::totalNodes()
+// Insert a node into the quadtree
+void QuadTree::insert(Node *node)
 {
-    // Total nodes = Total points + Total internal nodes
-    list<Point> pointList;
-    getPointList(root, pointList);
-    return pointList.size() + 1;
-}
-
-/**
- * @brief Inserta un nuevo punto en el QuadTree, asociado con la información disponible (nombre de la ciudad y
- * población).
- * @param p Punto a insertar.
- * @param cityName Nombre de la ciudad asociada al punto.
- * @param population Población de la ciudad asociada al punto.
- */
-void QuadTree::insert(Point p, string cityName, int population)
-{
-    insertNode(root, p, cityName, population);
-}
-
-/**
- * @brief Obtiene una lista de todos los puntos almacenados en el QuadTree.
- * @return Lista de puntos almacenados.
- */
-list<Point> QuadTree::getPointList()
-{
-    list<Point> pointList;
-    getPointList(root, pointList);
-    return pointList;
-}
-
-/**
- * @brief Calcula la cantidad de puntos dentro de una región del plano, tomando como centro el punto p y una distancia
- * d.
- * @param p Punto central de la región.
- * @param d Distancia desde el punto central que define la región.
- * @return Cantidad de puntos dentro de la región.
- */
-int QuadTree::countRegion(Point p, int d)
-{
-    return countPointsInRegion(root, p, d);
-}
-
-/**
- * @brief Calcula la población estimada dentro de una región del plano, tomando como centro el punto p y una distancia
- * d.
- * @param p Punto central de la región.
- * @param d Distancia desde el punto central que define la región.
- * @return Población estimada dentro de la región.
- */
-int QuadTree::aggregateRegion(Point p, int d)
-{
-    return calculatePopulationInRegion(root, p, d);
-}
-
-/**
- * @brief Inserta un nodo en el QuadTree recursivamente.
- * @param currentNode Nodo actual en el proceso de inserción.
- * @param p Punto a insertar.
- * @param cityName Nombre de la ciudad asociada al punto.
- * @param population Población de la ciudad asociada al punto.
- */
-void QuadTree::insertNode(QuadTreeNode *currentNode, Point p, string cityName, int population)
-{
-    if (currentNode == nullptr)
+    if (node == nullptr)
         return;
 
     // Current quad cannot contain it
-    if (!inBoundary(p))
+    if (!inBoundary(node->pos))
         return;
 
     // We are at a quad of unit area
     // We cannot subdivide this quad further
-    if (abs(currentNode->topLeftLimit.x - currentNode->lowerRightLimit.x) <= 1 &&
-        abs(currentNode->topLeftLimit.y - currentNode->lowerRightLimit.y) <= 1)
+    if (abs(topLeft.x - botRight.x) <= 1 && abs(topLeft.y - botRight.y) <= 1)
     {
-        if (currentNode->node == nullptr)
-        {
-            currentNode->node = new QuadTreeNode(p, cityName, population);
-        }
+        if (n == nullptr)
+            n = node;
+
         return;
     }
 
-    int xMid = (currentNode->topLeftLimit.x + currentNode->lowerRightLimit.x) / 2;
-    int yMid = (currentNode->topLeftLimit.y + currentNode->lowerRightLimit.y) / 2;
-
-    if (p.x <= xMid)
+    if ((topLeft.x + botRight.x) / 2 > node->pos.x)
     {
-        if (p.y <= yMid)
+        // Indicates topLeftTree
+        if ((topLeft.y + botRight.y) / 2 > node->pos.y)
         {
-            if (currentNode->nw == nullptr)
-            {
-                currentNode->nw = new QuadTreeNode(Point(currentNode->topLeftLimit.x, currentNode->topLeftLimit.y),
-                                                   Point(xMid, yMid), "", 0);
-            }
-            insertNode(currentNode->nw, p, cityName, population);
+            if (topLeftTree == nullptr)
+                topLeftTree = new QuadTree(Point(topLeft.x, topLeft.y),
+                                           Point((topLeft.x + botRight.x) / 2, (topLeft.y + botRight.y) / 2));
+
+            topLeftTree->insert(node);
         }
+
+        // Indicates botLeftTree
         else
         {
-            if (currentNode->sw == nullptr)
-            {
-                currentNode->sw = new QuadTreeNode(Point(currentNode->topLeftLimit.x, yMid + 1),
-                                                   Point(xMid, currentNode->lowerRightLimit.y), "", 0);
-            }
-            insertNode(currentNode->sw, p, cityName, population);
+            if (botLeftTree == nullptr)
+                botLeftTree = new QuadTree(Point(topLeft.x, (topLeft.y + botRight.y) / 2),
+                                           Point((topLeft.x + botRight.x) / 2, botRight.y));
+
+            botLeftTree->insert(node);
         }
     }
     else
     {
-        if (p.y <= yMid)
+        // Indicates topRightTree
+        if ((topLeft.y + botRight.y) / 2 > node->pos.y)
         {
-            if (currentNode->ne == nullptr)
-            {
-                currentNode->ne = new QuadTreeNode(Point(xMid + 1, currentNode->topLeftLimit.y),
-                                                   Point(currentNode->lowerRightLimit.x, yMid), "", 0);
-            }
-            insertNode(currentNode->ne, p, cityName, population);
+            if (topRightTree == nullptr)
+                topRightTree = new QuadTree(Point((topLeft.x + botRight.x) / 2, topLeft.y),
+                                            Point(botRight.x, (topLeft.y + botRight.y) / 2));
+
+            topRightTree->insert(node);
         }
+
+        // Indicates botRightTree
         else
         {
-            if (currentNode->se == nullptr)
-            {
-                currentNode->se =
-                    new QuadTreeNode(Point(xMid + 1, yMid + 1),
-                                     Point(currentNode->lowerRightLimit.x, currentNode->lowerRightLimit.y), "", 0);
-            }
-            insertNode(currentNode->se, p, cityName, population);
+            if (botRightTree == nullptr)
+                botRightTree = new QuadTree(Point((topLeft.x + botRight.x) / 2, (topLeft.y + botRight.y) / 2),
+                                            Point(botRight.x, botRight.y));
+
+            botRightTree->insert(node);
         }
     }
 }
 
-/**
- * @brief Obtiene una lista de todos los puntos almacenados en el QuadTree.
- * @param node Nodo actual en el proceso de obtención de puntos.
- * @param pointList Lista de puntos.
- */
-void QuadTree::getPointList(QuadTreeNode *node, list<Point> &pointList)
+// Find a node in a quadtree
+Node *QuadTree::search(Point p)
 {
-    if (node == nullptr)
-    {
-        return;
-    }
+    // Current quad cannot contain it
+    if (!inBoundary(p))
+        return nullptr;
 
-    if (node->isBlack)
+    // We are at a quad of unit length
+    // We cannot subdivide this quad further
+    if (n != nullptr)
+        return n;
+
+    if ((topLeft.x + botRight.x) / 2 > p.x)
     {
-        // Calcular punto medio
-        pointList.push_back(Point((node->topLeftLimit.x + node->lowerRightLimit.x) / 2,
-                                  (node->topLeftLimit.y + node->lowerRightLimit.y) / 2));
+        // Indicates topLeftTree
+        if ((topLeft.y + botRight.y) / 2 > p.y)
+        {
+            if (topLeftTree == nullptr)
+                return nullptr;
+            return topLeftTree->search(p);
+        }
+
+        // Indicates botLeftTree
+        else
+        {
+            if (botLeftTree == nullptr)
+                return nullptr;
+            return botLeftTree->search(p);
+        }
     }
     else
     {
-        getPointList(node->nw, pointList);
-        getPointList(node->ne, pointList);
-        getPointList(node->sw, pointList);
-        getPointList(node->se, pointList);
+        // Indicates topRightTree
+        if ((topLeft.y + botRight.y) / 2 > p.y)
+        {
+            if (topRightTree == nullptr)
+                return nullptr;
+            return topRightTree->search(p);
+        }
+
+        // Indicates botRightTree
+        else
+        {
+            if (botRightTree == nullptr)
+                return nullptr;
+            return botRightTree->search(p);
+        }
     }
+};
+
+// Check if current quadtree contains the point
+bool QuadTree::inBoundary(Point p)
+{
+    return (p.x >= topLeft.x && p.x <= botRight.x && p.y >= topLeft.y && p.y <= botRight.y);
 }
 
-/**
- * @brief Calcula la cantidad de puntos dentro de una región del plano, tomando como centro el punto p y una distancia
- * d.
- * @param node Nodo actual en el proceso de conteo de puntos.
- * @param p Punto central de la región.
- * @param d Distancia desde el punto central que define la región.
- * @return Cantidad de puntos dentro de la región.
- */
-int QuadTree::countPointsInRegion(QuadTreeNode *node, Point p, int d)
+int QuadTree::totalPoints()
 {
-    if (node == nullptr)
+    if (n != nullptr)
     {
-        return 0;
-    }
-
-    if (node->isBlack)
-    {
-        if (p.x - d <= (node->topLeftLimit.x + node->lowerRightLimit.x) / 2 &&
-            p.x + d >= (node->topLeftLimit.x + node->lowerRightLimit.x) / 2 &&
-            p.y - d <= (node->topLeftLimit.y + node->lowerRightLimit.y) / 2 &&
-            p.y + d >= (node->topLeftLimit.y + node->lowerRightLimit.y) / 2)
-        {
-            return 1;
-        }
-        return 0;
+        // Si es una hoja negra, retorna 1
+        return 1;
     }
 
     int count = 0;
-    int xMid = (node->topLeftLimit.x + node->lowerRightLimit.x) / 2;
-    int yMid = (node->topLeftLimit.y + node->lowerRightLimit.y) / 2;
 
-    if (p.x - d <= xMid)
-    {
-        if (p.y - d <= yMid)
-        {
-            count += countPointsInRegion(node->nw, p, d);
-        }
-        if (p.y + d > yMid)
-        {
-            count += countPointsInRegion(node->sw, p, d);
-        }
-    }
-    if (p.x + d > xMid)
-    {
-        if (p.y - d <= yMid)
-        {
-            count += countPointsInRegion(node->ne, p, d);
-        }
-        if (p.y + d > yMid)
-        {
-            count += countPointsInRegion(node->se, p, d);
-        }
-    }
+    if (topLeftTree != nullptr)
+        count += topLeftTree->totalPoints();
+    if (topRightTree != nullptr)
+        count += topRightTree->totalPoints();
+    if (botLeftTree != nullptr)
+        count += botLeftTree->totalPoints();
+    if (botRightTree != nullptr)
+        count += botRightTree->totalPoints();
 
     return count;
 }
 
-/**
- * @brief Calcula la población estimada dentro de una región del plano, tomando como centro el punto p y una distancia
- * d.
- * @param node Nodo actual en el proceso de cálculo de población.
- * @param p Punto central de la región.
- * @param d Distancia desde el punto central que define la región.
- * @return Población estimada dentro de la región.
- */
-int QuadTree::calculatePopulationInRegion(QuadTreeNode *node, Point p, int d)
+int QuadTree::totalNodes()
 {
-    if (node == nullptr)
-    {
-        return 0;
-    }
+    int count = 0;
 
-    if (node->isBlack)
-    {
-        if (p.x - d <= (node->topLeftLimit.x + node->lowerRightLimit.x) / 2 &&
-            p.x + d >= (node->topLeftLimit.x + node->lowerRightLimit.x) / 2 &&
-            p.y - d <= (node->topLeftLimit.y + node->lowerRightLimit.y) / 2 &&
-            p.y + d >= (node->topLeftLimit.y + node->lowerRightLimit.y) / 2)
-        {
-            return node->population;
-        }
-        return 0;
-    }
+    if (n != nullptr)
+        count++; // Increment count for the current node
 
-    int population = 0;
-    int xMid = (node->topLeftLimit.x + node->lowerRightLimit.x) / 2;
-    int yMid = (node->topLeftLimit.y + node->lowerRightLimit.y) / 2;
+    if (topLeftTree != nullptr)
+        count += topLeftTree->totalNodes();
+    if (topRightTree != nullptr)
+        count += topRightTree->totalNodes();
+    if (botLeftTree != nullptr)
+        count += botLeftTree->totalNodes();
+    if (botRightTree != nullptr)
+        count += botRightTree->totalNodes();
 
-    if (p.x - d <= xMid)
-    {
-        if (p.y - d <= yMid)
-        {
-            population += calculatePopulationInRegion(node->nw, p, d);
-        }
-        if (p.y + d > yMid)
-        {
-            population += calculatePopulationInRegion(node->sw, p, d);
-        }
-    }
-    if (p.x + d > xMid)
-    {
-        if (p.y - d <= yMid)
-        {
-            population += calculatePopulationInRegion(node->ne, p, d);
-        }
-        if (p.y + d > yMid)
-        {
-            population += calculatePopulationInRegion(node->se, p, d);
-        }
-    }
-
-    return population;
-}
-
-bool QuadTree::inBoundary(Point p)
-{
-    return (p.x >= topLeftLimit.x && p.x <= lowerRightLimit.x && p.y >= topLeftLimit.y && p.y <= lowerRightLimit.y);
+    return count;
 }
