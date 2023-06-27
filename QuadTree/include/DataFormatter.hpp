@@ -2,9 +2,10 @@
 #define DATA_FORMATTER_HPP
 
 #include <sstream>
-#include <tuple>
 #include <string>
+#include <tuple>
 #include <vector>
+
 
 #include "Point.hpp"
 
@@ -42,11 +43,11 @@ std::vector<std::tuple<Point, std::string, int>> formatData(const std::string &i
 
         if (fields.size() >= 8)
         {
-            double latitude = std::stod(replaceCommaWithDot(fields[5]));
-            double longitude = std::stod(replaceCommaWithDot(fields[6]));
+            double y = std::stod(replaceCommaWithDot(fields[5]));
+            double x = std::stod(replaceCommaWithDot(fields[6]));
             int population = std::stoi(fields[4]);
 
-            Point point = {longitude, latitude};
+            Point point = {x, y};
             std::tuple<Point, std::string, int> dataTuple = std::make_tuple(point, fields[2], population);
 
             formattedData.push_back(dataTuple);

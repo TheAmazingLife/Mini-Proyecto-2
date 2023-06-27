@@ -7,7 +7,7 @@
 
 struct Node
 {
-public:
+  public:
     Point point;          // Coordenadas del punto
     std::string cityName; // Nombre de la ciudad asociada al nodo
     int population;       // Poblacion de la ciudad
@@ -17,8 +17,17 @@ public:
     Node *SW;             // Puntero al nodo hijo del suroeste
     Node *SE;             // Puntero al nodo hijo del sureste
 
-    Node(Point p, std::string name, int pop, std::string c) : point(p), cityName(name), population(pop), color(c), NW(new Node()), NE(new Node()), SW(new Node()), SE(new Node()) {}
-    Node() : color("White") {} // Si no recibe parametros, genera un nodo vacio disponible, color "White"
+    Node(Point p, std::string name, int pop, std::string c)
+    {
+        point = p;
+        cityName = name;
+        population = pop;
+        color = c;
+    }
+    Node()
+    {
+        color = "White";
+    } // Si no recibe parametros, genera un nodo vacio disponible, color "White"
 };
 
 #endif
