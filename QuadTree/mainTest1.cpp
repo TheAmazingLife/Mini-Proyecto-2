@@ -94,12 +94,15 @@ int main()
 
             // ciudades en un radio de r (ciudades en area de 2*r+1 X 2*r+1), a partir del (0, 0)
             Point center = {0, 0};
-            r = radio[i];
-            // Contar la cantidad de puntos en una region
-            countRegionTest(&quadtree, center, r);
+            for (int j = 0; i < 6; j++)
+            {
+                r = radio[j];
+                // Contar la cantidad de puntos en una region
+                countRegionTest(&quadtree, center, r);
 
-            // Calcular la poblacion estimada dentro de una region
-            aggregateRegionTest(&quadtree, center, r);
+                // Calcular la poblacion estimada dentro de una region
+                aggregateRegionTest(&quadtree, center, r);
+            }
         }
         expNum++;
     }
