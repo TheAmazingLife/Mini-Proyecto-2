@@ -24,8 +24,6 @@ void insertTest(QuadTree *quadtree, int n)
     auto data = formattedData.begin();
     for (int i = 0; i < n; i++)
     {
-        std::cout << i << std::endl;
-
         Point point = std::get<0>(*data);
         std::string cityName = std::get<1>(*data);
         int population = std::get<2>(*data);
@@ -85,6 +83,7 @@ int main()
             // Obtener la lista de puntos almacenados en el Quadtree
             std::list<Node *> pointList = quadtree.getPointList();
             // std::cout << "Cantidad de datos encontrados: " << pointList.size() << std::endl;
+            
             /*std::cout << "Lista de puntos almacenados en el Quadtree:" << std::endl;
             for (const auto &node : pointList)
             {

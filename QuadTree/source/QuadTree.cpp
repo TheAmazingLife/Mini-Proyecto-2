@@ -8,21 +8,14 @@ QuadTree::QuadTree()
     insertCount = 0;
 }
 
-QuadTree::~QuadTree()
-{
-    // llamada a clear() que limpia desde el nodo raiz
-    clear();
-}
-
-void QuadTree::clear() // ? Podria recibir un nodo como parametro y eliminar desde ahi en caso de cambiarla cambiamos el
-                       // comentario tambien
+void QuadTree::clear()
 {
     // Llamada a la funcion para eliminar el quadTree
     clearRecursive(root);
     root = new Node(); // Asigna la raiz como un nodo "White" vacio y disponible
 }
 
-void QuadTree::clearRecursive(Node *node) // ? Podria llamarse deleteQuadTree
+void QuadTree::clearRecursive(Node *node)
 {
     // Si el color del nodo es "White" (blanco), el nodo no contiene nodos y retorna
     if (node->color == "White")
@@ -148,21 +141,21 @@ int QuadTree::totalNodes()
 
 std::list<Node *> QuadTree::getPointList()
 {
-    std::list<Node *> leafNodes;
-    getPointListRecursive(root, leafNodes);
-    return leafNodes;
+    std::list<Node *> pointList;
+    getPointListRecursive(root, pointList);
+    return pointList;
 }
 
 int QuadTree::countRegion(Point p, int d)
 {
     // Cuenta los puntos recursivamente desde la raiz, en base a un punto p, y un radio d
-    return countRegionRecursive(root, p, d + 1);
+    return countRegionRecursive(root, p, d);
 }
 
 int QuadTree::aggregateRegion(Point p, int d)
 {
     // Cuenta la poblacion recursivamente la desde la raiz, en base a un punto p, y un radio d
-    return aggregateRegionRecursive(root, p, d + 1);
+    return aggregateRegionRecursive(root, p, d);
 }
 
 void QuadTree::totalNodesRecursive(Node *node, int &count)
