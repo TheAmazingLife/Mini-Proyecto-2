@@ -1,0 +1,799 @@
+* Experimento N:1
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 955.323 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 941.124 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 993.048 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 951.18 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 948.985 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 956.192 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 983.059 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 944.298 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 957.222 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 956.307 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 929.098 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 953.656 ms
+
+
+
+* Experimento N:2
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 965.197 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 973.553 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 1001.24 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 985.709 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 974.951 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 972.916 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 966.57 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 941.166 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 1020.79 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 982.619 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 941.833 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 996.505 ms
+
+
+
+* Experimento N:3
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 1000.03 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 956.268 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 907.865 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 969.111 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 1023.47 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 922.443 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 1026.01 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 1038.92 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 984.103 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 942.684 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 960.469 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 934.895 ms
+
+
+
+* Experimento N:4
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 963.625 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 976.905 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 973.117 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 955.266 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 981.848 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 965.423 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 990.118 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 985.32 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 951.954 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 1034.9 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 1020.22 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 1099.18 ms
+
+
+
+* Experimento N:5
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 1089.9 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 1109.64 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 1129.46 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 1105.38 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 1072.57 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 1063.24 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 1129.21 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 1085.46 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 985.584 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 1022.08 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 1004.94 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 1013.08 ms
+
+
+
+* Experimento N:6
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 957.481 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 1012.6 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 940.432 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 968.258 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 947.286 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 966.178 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 1013.51 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 961.281 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 958.946 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 952.797 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 963.158 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 965.073 ms
+
+
+
+* Experimento N:7
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 935.96 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 993.199 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 998.037 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 973.155 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 971.691 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 957.664 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 946.786 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 997.494 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 953.419 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 980.075 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 946.372 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 943.148 ms
+
+
+
+* Experimento N:8
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 963.626 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 960.417 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 961.038 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 1027.32 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 949.347 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 975.716 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 965.982 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 954.006 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 951.947 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 965.264 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 965.564 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 948.61 ms
+
+
+
+* Experimento N:9
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 960.275 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 957.231 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 937.404 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 928.626 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 977.095 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 949.326 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 950.658 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 1030.96 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 908.648 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 933.949 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 958.557 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 948.242 ms
+
+
+
+* Experimento N:10
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 1103.54 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 987.45 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 980.406 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 970.137 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 944.565 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 1033.05 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 1022.66 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 1043.3 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 1047.29 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 935.784 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 977.99 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 978.489 ms
+
+
+
+* Experimento N:11
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 996.662 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 959.16 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 921.114 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 933.611 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 1027.61 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 968.332 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 1092.65 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 1021.62 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 1005.76 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 967.64 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 1010.12 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 1054.33 ms
+
+
+
+* Experimento N:12
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 932.898 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 1003.64 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 942.324 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 955.05 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 940.931 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 918.914 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 900.504 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 913.453 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 899.816 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 959.203 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 920.551 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 957.362 ms
+
+
+
+* Experimento N:13
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 962.422 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 1013 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 954.315 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 965.985 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 946.474 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 940.375 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 1003.07 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 1021.21 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 1044.26 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 1016.23 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 1001.88 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 982.277 ms
+
+
+
+* Experimento N:14
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 1059.31 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 1208.13 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 1014.23 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 1048.41 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 975.73 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 1005.79 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 1003.78 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 973.532 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 1035.93 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 1017.41 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 1023.21 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 967.527 ms
+
+
+
+* Experimento N:15
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 965.039 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 926.564 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 1029.17 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 1009.3 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 983.865 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 976.977 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 961.727 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 1025.98 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 1040.03 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 967.016 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 862.728 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 877.511 ms
+
+
+
+* Experimento N:16
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 938.806 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 927.367 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 948.319 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 904.551 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 892.624 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 1004.94 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 1002.23 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 980.674 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 953.923 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 989.085 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 1030.87 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 1065.31 ms
+
+
+
+* Experimento N:17
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 857.005 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 857.613 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 837.188 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 853.785 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 851.484 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 862.248 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 852.395 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 849.754 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 830.426 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 861.466 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 827.357 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 921.951 ms
+
+
+* Experimento N:18
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 876.291 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 925.906 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 902.792 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 1000.86 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 962.721 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 984.829 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 947.447 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 1005.8 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 977.973 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 984.492 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 949.458 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 954.247 ms
+
+
+
+* Experimento N:19
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 836.026 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 855.68 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 895.819 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 907.714 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 914.49 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 1001.62 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 968.283 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 994.914 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 929.823 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 961.895 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 894.614 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 901.276 ms
+
+
+
+* Experimento N:20
+-- Se insertan: 3173647 ciudades --
+>> Prueba radio: 15
+Cantidad de puntos en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 128977
+Tiempo total countRegion(): 1095.43 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 15, rango: 15 X 15): 1517368162
+Tiempo total aggregateRegion(): 925.29 ms
+
+>> Prueba radio: 30
+Cantidad de puntos en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 271054
+Tiempo total countRegion(): 962.606 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 30, rango: 30 X 30): 1745906494
+Tiempo total aggregateRegion(): 946.362 ms
+
+>> Prueba radio: 45
+Cantidad de puntos en la region (centro: 0, 0, radio: 45, rango: 45 X 45): 525549
+Tiempo total countRegion(): 935.378 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 45, rango: 45 X 45): -1109228544
+Tiempo total aggregateRegion(): 975.443 ms
+
+>> Prueba radio: 60
+Cantidad de puntos en la region (centro: 0, 0, radio: 60, rango: 60 X 60): 1273358
+Tiempo total countRegion(): 1083.42 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 60, rango: 60 X 60): -1671682234
+Tiempo total aggregateRegion(): 980.188 ms
+
+>> Prueba radio: 75
+Cantidad de puntos en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1765804
+Tiempo total countRegion(): 940.237 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 75, rango: 75 X 75): 1484249221
+Tiempo total aggregateRegion(): 952.513 ms
+
+>> Prueba radio: 90
+Cantidad de puntos en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2142874
+Tiempo total countRegion(): 944.179 ms
+Poblacion estimada en la region (centro: 0, 0, radio: 90, rango: 90 X 90): 2083914284
+Tiempo total aggregateRegion(): 927.652 ms
+
+
+

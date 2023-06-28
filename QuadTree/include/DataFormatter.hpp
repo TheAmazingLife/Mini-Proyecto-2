@@ -9,7 +9,7 @@
 
 #include "Point.hpp"
 
-// Función auxiliar para reemplazar la coma por un punto en una cadena
+// Funcion auxiliar para reemplazar la coma por un punto en una cadena
 std::string replaceCommaWithDot(const std::string &str)
 {
     std::string result = str;

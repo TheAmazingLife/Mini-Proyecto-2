@@ -1,0 +1,4 @@
+g++ -O3 mainMetodos.cpp source/*.cpp -o metodos
+nice -n -20 ./metodos.exe
+g++ -O3 mainInsert.cpp source/*.cpp -o insert
+nice -n -20 ./insert.exe

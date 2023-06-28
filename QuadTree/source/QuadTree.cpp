@@ -146,13 +146,13 @@ std::list<Node *> QuadTree::getPointList()
     return pointList;
 }
 
-int QuadTree::countRegion(Point p, int d)
+long long QuadTree::countRegion(Point p, int d)
 {
     // Cuenta los puntos recursivamente desde la raiz, en base a un punto p, y un radio d
     return countRegionRecursive(root, p, d);
 }
 
-int QuadTree::aggregateRegion(Point p, int d)
+long long QuadTree::aggregateRegion(Point p, int d)
 {
     // Cuenta la poblacion recursivamente la desde la raiz, en base a un punto p, y un radio d
     return aggregateRegionRecursive(root, p, d);
@@ -202,7 +202,7 @@ void QuadTree::getPointListRecursive(Node *node, std::list<Node *> &pointList)
     }
 }
 
-int QuadTree::countRegionRecursive(Node *node, Point p, int d)
+long long QuadTree::countRegionRecursive(Node *node, Point p, int d)
 {
     // Si el color del nodo es "White" (blanco), el nodo no contiene puntos y devuelve 0
     if (node->color == "White")
@@ -231,7 +231,7 @@ int QuadTree::countRegionRecursive(Node *node, Point p, int d)
     return count; // Se devuelve el total de puntos contados en la region circular
 }
 
-int QuadTree::aggregateRegionRecursive(Node *node, Point p, int d)
+long long QuadTree::aggregateRegionRecursive(Node *node, Point p, int d)
 {
     // Si el color del nodo es "White" (blanco), el nodo no contiene datos y devuelve 0 como valor agregado
     if (node->color == "White")

@@ -1,0 +1,640 @@
+* Experimento N:1
+-- Se insertan: 100000 ciudades --
+Tiempo total: 174.616 ms
+Tiempo promedio por insercion: 0.001746 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 704.575500 ms
+Tiempo promedio por insercion: 0.003523 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 3272.045300 ms
+Tiempo promedio por insercion: 0.008180 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 13568.852300 ms
+Tiempo promedio por insercion: 0.016961 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 54319.564500 ms
+Tiempo promedio por insercion: 0.033950 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 71965.5 ms
+Tiempo promedio por insercion: 0.022676 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:2
+-- Se insertan: 100000 ciudades --
+Tiempo total: 149.859400 ms
+Tiempo promedio por insercion: 0.001499 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 698.882000 ms
+Tiempo promedio por insercion: 0.003494 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 2621.571700 ms
+Tiempo promedio por insercion: 0.006554 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 12234.389600 ms
+Tiempo promedio por insercion: 0.015293 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 55348.962100 ms
+Tiempo promedio por insercion: 0.034593 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 70787.655500 ms
+Tiempo promedio por insercion: 0.022305 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:3
+-- Se insertan: 100000 ciudades --
+Tiempo total: 198.487600 ms
+Tiempo promedio por insercion: 0.001985 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 720.020400 ms
+Tiempo promedio por insercion: 0.003600 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 2665.571500 ms
+Tiempo promedio por insercion: 0.006664 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 11295.025500 ms
+Tiempo promedio por insercion: 0.014119 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 52188.450400 ms
+Tiempo promedio por insercion: 0.032618 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 68528.486300 ms
+Tiempo promedio por insercion: 0.021593 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:4
+-- Se insertan: 100000 ciudades --
+Tiempo total: 179.899900 ms
+Tiempo promedio por insercion: 0.001799 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 707.589300 ms
+Tiempo promedio por insercion: 0.003538 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 2798.509700 ms
+Tiempo promedio por insercion: 0.006996 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 11344.947000 ms
+Tiempo promedio por insercion: 0.014181 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 53132.478700 ms
+Tiempo promedio por insercion: 0.033208 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 68939.171200 ms
+Tiempo promedio por insercion: 0.021722 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:5
+-- Se insertan: 100000 ciudades --
+Tiempo total: 198.836500 ms
+Tiempo promedio por insercion: 0.001988 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 688.563700 ms
+Tiempo promedio por insercion: 0.003443 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 2731.452500 ms
+Tiempo promedio por insercion: 0.006829 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 11755.850300 ms
+Tiempo promedio por insercion: 0.014695 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 54789.367000 ms
+Tiempo promedio por insercion: 0.034243 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 69516.175500 ms
+Tiempo promedio por insercion: 0.021904 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:6
+-- Se insertan: 100000 ciudades --
+Tiempo total: 161.174900 ms
+Tiempo promedio por insercion: 0.001612 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 720.441800 ms
+Tiempo promedio por insercion: 0.003602 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 3319.438200 ms
+Tiempo promedio por insercion: 0.008299 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 12214.686500 ms
+Tiempo promedio por insercion: 0.015268 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 51025.379200 ms
+Tiempo promedio por insercion: 0.031891 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 76520.143000 ms
+Tiempo promedio por insercion: 0.024111 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:7
+-- Se insertan: 100000 ciudades --
+Tiempo total: 172.942700 ms
+Tiempo promedio por insercion: 0.001729 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 720.561500 ms
+Tiempo promedio por insercion: 0.003603 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 2778.610300 ms
+Tiempo promedio por insercion: 0.006947 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 12262.932800 ms
+Tiempo promedio por insercion: 0.015329 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 52190.485600 ms
+Tiempo promedio por insercion: 0.032619 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 71775.042500 ms
+Tiempo promedio por insercion: 0.022616 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:8
+-- Se insertan: 100000 ciudades --
+Tiempo total: 172.643600 ms
+Tiempo promedio por insercion: 0.001726 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 687.553300 ms
+Tiempo promedio por insercion: 0.003438 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 2841.157800 ms
+Tiempo promedio por insercion: 0.007103 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 11738.533000 ms
+Tiempo promedio por insercion: 0.014673 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 52137.920400 ms
+Tiempo promedio por insercion: 0.032586 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 69324.658500 ms
+Tiempo promedio por insercion: 0.021844 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:9
+-- Se insertan: 100000 ciudades --
+Tiempo total: 192.467000 ms
+Tiempo promedio por insercion: 0.001925 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 787.855200 ms
+Tiempo promedio por insercion: 0.003939 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 3117.407800 ms
+Tiempo promedio por insercion: 0.007794 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 12256.108200 ms
+Tiempo promedio por insercion: 0.015320 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 52822.293200 ms
+Tiempo promedio por insercion: 0.033014 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 70784.890700 ms
+Tiempo promedio por insercion: 0.022304 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:10
+-- Se insertan: 100000 ciudades --
+Tiempo total: 235.082800 ms
+Tiempo promedio por insercion: 0.002351 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 744.726900 ms
+Tiempo promedio por insercion: 0.003724 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 2939.236400 ms
+Tiempo promedio por insercion: 0.007348 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 12647.712600 ms
+Tiempo promedio por insercion: 0.015810 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 52533.754000 ms
+Tiempo promedio por insercion: 0.032834 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 68852.370100 ms
+Tiempo promedio por insercion: 0.021695 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:11
+-- Se insertan: 100000 ciudades --
+Tiempo total: 174.499900 ms
+Tiempo promedio por insercion: 0.001745 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 745.849000 ms
+Tiempo promedio por insercion: 0.003729 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 2952.569100 ms
+Tiempo promedio por insercion: 0.007381 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 11610.757800 ms
+Tiempo promedio por insercion: 0.014513 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 53229.447400 ms
+Tiempo promedio por insercion: 0.033268 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 73241.868300 ms
+Tiempo promedio por insercion: 0.023078 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:12
+-- Se insertan: 100000 ciudades --
+Tiempo total: 201.537100 ms
+Tiempo promedio por insercion: 0.002015 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 819.904800 ms
+Tiempo promedio por insercion: 0.004100 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 3090.723000 ms
+Tiempo promedio por insercion: 0.007727 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 12629.774200 ms
+Tiempo promedio por insercion: 0.015787 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 54363.925500 ms
+Tiempo promedio por insercion: 0.033977 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 79108.482500 ms
+Tiempo promedio por insercion: 0.024927 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:13
+-- Se insertan: 100000 ciudades --
+Tiempo total: 191.403200 ms
+Tiempo promedio por insercion: 0.001914 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 632.831100 ms
+Tiempo promedio por insercion: 0.003164 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 2636.290800 ms
+Tiempo promedio por insercion: 0.006591 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 11286.576900 ms
+Tiempo promedio por insercion: 0.014108 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 48559.961800 ms
+Tiempo promedio por insercion: 0.030350 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 52968.871200 ms
+Tiempo promedio por insercion: 0.016690 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:14
+-- Se insertan: 100000 ciudades --
+Tiempo total: 176.056 ms
+Tiempo promedio por insercion: 0.001761 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 689.907100 ms
+Tiempo promedio por insercion: 0.003450 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 2877.019300 ms
+Tiempo promedio por insercion: 0.007193 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 11921.289200 ms
+Tiempo promedio por insercion: 0.014902 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 51774.346100 ms
+Tiempo promedio por insercion: 0.032359 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 69471.6 ms
+Tiempo promedio por insercion: 0.021890 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+
+* Experimento N:15
+-- Se insertan: 100000 ciudades --
+Tiempo total: 171.176300 ms
+Tiempo promedio por insercion: 0.001712 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 742.920600 ms
+Tiempo promedio por insercion: 0.003715 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 3038.628200 ms
+Tiempo promedio por insercion: 0.007597 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 13014.457200 ms
+Tiempo promedio por insercion: 0.016268 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 53666.903100 ms
+Tiempo promedio por insercion: 0.033542 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 67795.933500 ms
+Tiempo promedio por insercion: 0.021362 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:16
+-- Se insertan: 100000 ciudades --
+Tiempo total: 169.790500 ms
+Tiempo promedio por insercion: 0.001698 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 700.527300 ms
+Tiempo promedio por insercion: 0.003503 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 2738.441600 ms
+Tiempo promedio por insercion: 0.006846 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 12015.288100 ms
+Tiempo promedio por insercion: 0.015019 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 53523.767000 ms
+Tiempo promedio por insercion: 0.033452 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 68346.138800 ms
+Tiempo promedio por insercion: 0.021536 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:17
+-- Se insertan: 100000 ciudades --
+Tiempo total: 259.771400 ms
+Tiempo promedio por insercion: 0.002598 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 781.197100 ms
+Tiempo promedio por insercion: 0.003906 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 2793.320100 ms
+Tiempo promedio por insercion: 0.006983 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 12640.352600 ms
+Tiempo promedio por insercion: 0.015800 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 51261.818900 ms
+Tiempo promedio por insercion: 0.032039 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 70530.486600 ms
+Tiempo promedio por insercion: 0.022224 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:18
+-- Se insertan: 100000 ciudades --
+Tiempo total: 168.479700 ms
+Tiempo promedio por insercion: 0.001685 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 708.622100 ms
+Tiempo promedio por insercion: 0.003543 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 2802.492700 ms
+Tiempo promedio por insercion: 0.007006 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 11896.839300 ms
+Tiempo promedio por insercion: 0.014871 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 51409.318200 ms
+Tiempo promedio por insercion: 0.032131 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 68545.981100 ms
+Tiempo promedio por insercion: 0.021598 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:19
+-- Se insertan: 100000 ciudades --
+Tiempo total: 168.512 ms
+Tiempo promedio por insercion: 0.001685 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 713.952000 ms
+Tiempo promedio por insercion: 0.003570 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 3129.829600 ms
+Tiempo promedio por insercion: 0.007825 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 11959.649200 ms
+Tiempo promedio por insercion: 0.014950 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 50655.337200 ms
+Tiempo promedio por insercion: 0.031660 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 69174.716100 ms
+Tiempo promedio por insercion: 0.021797 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589
+
+* Experimento N:20
+-- Se insertan: 100000 ciudades --
+Tiempo total: 155.653500 ms
+Tiempo promedio por insercion: 0.001557 ms
+Cantidad total de puntos: 100000
+Cantidad total de nodos: 400001
+-- Se insertan: 200000 ciudades --
+Tiempo total: 686.315300 ms
+Tiempo promedio por insercion: 0.003432 ms
+Cantidad total de puntos: 300000
+Cantidad total de nodos: 1200001
+-- Se insertan: 400000 ciudades --
+Tiempo total: 2740.502900 ms
+Tiempo promedio por insercion: 0.006851 ms
+Cantidad total de puntos: 700000
+Cantidad total de nodos: 2800001
+-- Se insertan: 800000 ciudades --
+Tiempo total: 12957.906500 ms
+Tiempo promedio por insercion: 0.016197 ms
+Cantidad total de puntos: 1500000
+Cantidad total de nodos: 6000001
+-- Se insertan: 1600000 ciudades --
+Tiempo total: 51403.515100 ms
+Tiempo promedio por insercion: 0.032127 ms
+Cantidad total de puntos: 3100000
+Cantidad total de nodos: 12400001
+-- Se insertan: 3173647 ciudades --
+Tiempo total: 69379.845100 ms
+Tiempo promedio por insercion: 0.021861 ms
+Cantidad total de puntos: 3173647
+Cantidad total de nodos: 12694589

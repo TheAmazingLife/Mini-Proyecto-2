@@ -7,7 +7,7 @@
 
 struct Node
 {
-  public:
+public:
     Point point;          // Coordenadas del punto
     std::string cityName; // Nombre de la ciudad asociada al nodo
     int population;       // Poblacion de la ciudad
@@ -24,10 +24,12 @@ struct Node
         population = pop;
         color = c;
     }
+
+    // Constructor sin parámetros, genera un nodo vacío disponible con color "White"
     Node()
     {
         color = "White";
-    } // Si no recibe parametros, genera un nodo vacio disponible, color "White"
+    }
 };
 
 #endif
