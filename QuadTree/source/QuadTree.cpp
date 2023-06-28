@@ -259,3 +259,26 @@ int QuadTree::aggregateRegionRecursive(Node *node, Point p, int d)
 
     return aggregate; // Se devuelve el valor agregado de poblacion en la region circular
 }
+
+void QuadTree::printTotalPopulation()
+{
+    long long totalPopulation = calculateTotalPopulation(root); // Cambiado a long long para evitar la notación científica
+    std::cout << "Poblacion total en todo el Quadtree: " << totalPopulation << std::endl;
+}
+
+long long QuadTree::calculateTotalPopulation(Node* node) // Cambiado a long long para evitar la notación científica
+{
+    if (node->color == "White")
+    {
+        return 0;
+    }
+
+    long long totalPopulation = node->population; // Cambiado a long long para evitar la notación científica
+
+    totalPopulation += calculateTotalPopulation(node->NW);
+    totalPopulation += calculateTotalPopulation(node->NE);
+    totalPopulation += calculateTotalPopulation(node->SW);
+    totalPopulation += calculateTotalPopulation(node->SE);
+
+    return totalPopulation;
+}

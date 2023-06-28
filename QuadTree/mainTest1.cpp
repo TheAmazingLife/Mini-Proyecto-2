@@ -58,11 +58,12 @@ int main()
 {
     int n;
     int r;
-    int cities[6] = {3173647, 200000, 400000, 800000, 1600000, 3173647};
+    int cities[6] = {100000, 200000, 400000, 800000, 1600000, 3173647};
     int radio[6] = {2, 100, 20000, 520000, 1000000, 3173647};
-    int expNum = 0;
+    int expNum = 1;
     while (expNum <= 20)
     {
+        std::cout << "Experimento nro: " << expNum << std::endl;
         // Crear el Quadtree y cargar los datos
         QuadTree quadtree;
         for (int i = 0; i < 5; i++)

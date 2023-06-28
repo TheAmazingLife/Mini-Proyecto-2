@@ -36,6 +36,8 @@ int main()
     int totalNodes = quadtree.totalNodes();
     std::cout << "Cantidad total de nodos: " << totalNodes << std::endl;
 
+    quadtree.printTotalPopulation();
+
 /*     // Obtener la lista de puntos almacenados en el Quadtree
     std::list<Point> pointList = quadtree.getPointList();
     std::cout << "Cantidad de datos encontrados: " << pointList.size() << std::endl;
